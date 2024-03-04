@@ -13,3 +13,43 @@
 | Mnist (🔥) | 0.36 | 8.14 |
 | Res25 (Torch) | 1.89 | 4.21 |
 | Res25 (🔥) | 2.27 | 1.15 |
+
+
+## Running the test
+### Running the MNist model
+* Compile Torch model into TorchScript
+
+```bash
+python mnist.scriptCompile.py
+```
+
+* Run the model with TorchScript
+
+```bash
+python mnist.run.py
+```
+
+* Run the model with Max Engine
+
+```bash
+python mnist.run-🔥.py
+```
+
+### Running the Res25 model
+* Compile Torch model into TorchScript
+
+```bash
+python res25.scriptCompile.py
+```
+
+* Run the model with TorchScript
+
+```bash
+python res25.run.py
+```
+
+* Run the model with Max Engine
+
+```bash
+python res25.run-🔥.py
+```
