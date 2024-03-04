@@ -53,3 +53,33 @@ python res25.run.py
 ```bash
 python res25.run-🔥.py
 ```
+
+
+## Install Max Engine for python
+
+1. Install Modular
+```bash
+curl https://get.modular.com | sh -
+```
+2. Sign into your Modular account:
+```bash
+modular auth
+```
+
+3. Install Max Engine
+```bash
+modular install max
+```
+
+4. Install Max Engine for python
+```bash
+MAX_PATH=$(modular config max.path) \
+  && python3 -m pip install --find-links $MAX_PATH/wheels max-engine
+```
+5. Add ZSH path
+```bash
+MAX_PATH=$(modular config max.path) \
+  && echo 'export MODULAR_HOME="'$HOME'/.modular"' >> ~/.zshrc \
+  && echo 'export PATH="'$MAX_PATH'/bin:$PATH"' >> ~/.zshrc \
+  && source ~/.zshrc
+```
